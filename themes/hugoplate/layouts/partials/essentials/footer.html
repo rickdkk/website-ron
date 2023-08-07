@@ -1,0 +1,57 @@
+<footer class="bg-theme-light dark:bg-darkmode-theme-light">
+  <div class="container">
+    <div class="row items-center py-10">
+      <div class="lg:col-3 mb-8 text-center lg:mb-0 lg:text-left">
+        <!-- navbar brand/logo -->
+        <a
+          class="navbar-brand inline-block"
+          href="{{ site.BaseURL | relLangURL }}">
+          {{ partial "logo" }}
+        </a>
+      </div>
+      <div class="lg:col-6 mb-8 text-center lg:mb-0">
+        <ul>
+          {{ range site.Menus.footer }}
+            <li class="m-3 inline-block">
+              <a
+                {{ if findRE `^http` .URL }}
+                  target="_blank" rel="noopener"
+                {{ end }}
+                href="{{ if findRE `^#` .URL }}
+                  {{ if not $.IsHome }}
+                    {{ site.BaseURL | relLangURL }}
+                  {{ end }}{{ .URL }}
+                {{ else }}
+                  {{ .URL | relLangURL }}
+                {{ end }}"
+                >{{ .Name }}</a
+              >
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="lg:col-3 mb-8 text-center lg:mb-0 lg:mt-0 lg:text-right">
+        <ul class="social-icons">
+          {{ range site.Data.social.main }}
+            <li>
+              <a
+                target="_blank"
+                aria-label="{{ .name }}"
+                rel="nofollow noopener"
+                href="{{ .link | safeURL }}">
+                <i class="{{ .icon }}"></i>
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+        <div>
+          <p><i class="fa-solid fa-phone"></i> <a href="tel:0651415159">06-51415159</a></p>
+          <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/31651415159?text=Dag%20Ron,%20ik%20was%20zojuist%20op%20je%20website%20en%20vroeg%20me%20af%20of%20je%20kan%20helpen%20met%20...">06-51415159</a></p>
+          <p><i class="fa-regular fa-envelope"></i></i> <a href="mailto:ron.klerk@planet.nl">ron.klerk@planet.nl</a></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</footer>

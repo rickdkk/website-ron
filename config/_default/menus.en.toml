@@ -1,0 +1,24 @@
+############# English navigation ##############
+
+# main menu
+[[main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[main]]
+name = "Over ons"
+url = "over/"
+weight = 2
+
+[[main]]
+name = "Projecten"
+url = "projecten/"
+weight = 3
+
+# footer menu
+[[footer]]
+name = "Interesse? Neem contact met ons op!"
+url = "contact/"
+weight = 1
+
