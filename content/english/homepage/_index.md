@@ -7,7 +7,7 @@ banner:
   button:
     enable: true
     label: "Contact"
-    link: "/contact"
+    link: "contact"
 
 # Features
 features:
@@ -23,7 +23,7 @@ features:
     button:
       enable: true
       label: "Over ons"
-      link: "/over"
+      link: "over"
 
   - title: "Leveranciers en projecten"
     image: "/images/collage-2-v1.png"
@@ -36,6 +36,6 @@ features:
     button:
       enable: true
       label: "Projecten"
-      link: "/projecten"
+      link: "projecten"
 
 ---
